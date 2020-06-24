@@ -2,7 +2,8 @@ set runtimepath+=~/.vim_runtime
 
 call plug#begin('~/local/share/nvim/plugged')
 
-Plug 'morhetz/gruvbox'
+Plug 'https://github.com/morhetz/gruvbox.git'
+Plug 'joshdick/onedark.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -11,6 +12,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'https://github.com/vim-scripts/taglist.vim.git'
 Plug 'https://github.com/preservim/nerdcommenter.git'
+Plug 'https://github.com/dense-analysis/ale.git'
 
 call plug#end()
 
@@ -35,4 +37,6 @@ let g:NERDCompactSexyComs = 1
 " [count]<leader>ci valjda linijski komentar probaj jbg
 " [count]<leader>cs brise komentare i stavi neki blok format layout
 " [count]<leader>cy isto ko cc samo neki yanked ubaci vidi kad probas sta je
+
+colorscheme gruvbox
 
