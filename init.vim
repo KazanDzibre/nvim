@@ -13,6 +13,9 @@ Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'https://github.com/vim-scripts/taglist.vim.git'
 Plug 'https://github.com/preservim/nerdcommenter.git'
 Plug 'https://github.com/dense-analysis/ale.git'
+Plug 'https://github.com/tomasr/molokai.git'
+Plug 'https://github.com/dracula/vim.git'
+Plug 'https://github.com/gosukiwi/vim-atom-dark.git'
 
 call plug#end()
 
@@ -38,5 +41,5 @@ let g:NERDCompactSexyComs = 1
 " [count]<leader>cs brise komentare i stavi neki blok format layout
 " [count]<leader>cy isto ko cc samo neki yanked ubaci vidi kad probas sta je
 
-colorscheme gruvbox
+colorscheme atom-dark-256 
 
