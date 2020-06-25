@@ -9,6 +9,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
+Plug 'https://github.com/justmao945/vim-clang.git'
 Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'https://github.com/vim-scripts/taglist.vim.git'
 Plug 'https://github.com/preservim/nerdcommenter.git'
@@ -17,6 +18,7 @@ Plug 'https://github.com/tomasr/molokai.git'
 Plug 'https://github.com/dracula/vim.git'
 Plug 'https://github.com/gosukiwi/vim-atom-dark.git'
 Plug 'https://github.com/octol/vim-cpp-enhanced-highlight.git'
+Plug 'https://github.com/jiangmiao/auto-pairs.git'
 
 call plug#end()
 
