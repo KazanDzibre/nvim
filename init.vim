@@ -12,16 +12,31 @@ Plug 'itchyny/lightline.vim'
 Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'https://github.com/vim-scripts/taglist.vim.git'
 Plug 'https://github.com/preservim/nerdcommenter.git'
-Plug 'https://github.com/dense-analysis/ale.git'
+Plug 'https://github.com/vim-syntastic/syntastic.git'
 Plug 'https://github.com/tomasr/molokai.git'
 Plug 'https://github.com/dracula/vim.git'
 Plug 'https://github.com/gosukiwi/vim-atom-dark.git'
+Plug 'https://github.com/octol/vim-cpp-enhanced-highlight.git'
 
 call plug#end()
 
 set number
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set noexpandtab
 
-autocmd vimenter * NERDTree
+" Za ce da budu svi isti
+augroup project
+  autocmd!
+  autocmd BufRead,BufNewFile *.h,*.c set filetype=c.doxygen
+augroup END
+
+
+set colorcolumn=120
+highlight ColorColumn ctermbg=darkgray
+
+"autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -41,5 +56,15 @@ let g:NERDCompactSexyComs = 1
 " [count]<leader>cs brise komentare i stavi neki blok format layout
 " [count]<leader>cy isto ko cc samo neki yanked ubaci vidi kad probas sta je
 
+" Color scheme OVDE
 colorscheme atom-dark-256 
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
