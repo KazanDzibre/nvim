@@ -1,4 +1,3 @@
-set runtimepath+=~/.vim_runtime
 
 call plug#begin('~/local/share/nvim/plugged')
 
@@ -11,7 +10,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'https://github.com/justmao945/vim-clang.git'
 Plug 'https://github.com/tpope/vim-surround.git'
-Plug 'https://github.com/vim-scripts/taglist.vim.git'
+"Plug 'https://github.com/vim-scripts/taglist.vim.git'
 Plug 'https://github.com/preservim/nerdcommenter.git'
 Plug 'https://github.com/vim-syntastic/syntastic.git'
 Plug 'https://github.com/tomasr/molokai.git'
@@ -21,6 +20,11 @@ Plug 'https://github.com/octol/vim-cpp-enhanced-highlight.git'
 Plug 'https://github.com/jiangmiao/auto-pairs.git'
 
 call plug#end()
+
+
+nmap<leader>gd <Plug>(coc-definition)
+nmap<leader>gr <Plug>(coc-references)
+nnoremap<C-p> :GFiles<CR>
 
 set number
 set tabstop=4
