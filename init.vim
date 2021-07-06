@@ -1,13 +1,15 @@
-
 call plug#begin('~/local/share/nvim/plugged')
 
 Plug 'https://github.com/morhetz/gruvbox.git'
 Plug 'joshdick/onedark.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
+Plug 'OmniSharp/omnisharp-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
+Plug 'prettier/vim-prettier', { 'do': 'npm install' , 'branch' : 'release/1.x' }
+Plug 'dense-analysis/ale'
 Plug 'https://github.com/justmao945/vim-clang.git'
 Plug 'https://github.com/tpope/vim-surround.git'
 "Plug 'https://github.com/vim-scripts/taglist.vim.git'
@@ -18,6 +20,17 @@ Plug 'https://github.com/dracula/vim.git'
 Plug 'https://github.com/gosukiwi/vim-atom-dark.git'
 Plug 'https://github.com/octol/vim-cpp-enhanced-highlight.git'
 Plug 'https://github.com/jiangmiao/auto-pairs.git'
+Plug 'mattn/emmet-vim'
+Plug 'mxw/vim-jsx'
+Plug 'SirVer/ultisnips'
+Plug 'Ivo-Donchev/vim-react-goto-definition'
+Plug 'pangloss/vim-javascript'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'majutsushi/tagbar'
+Plug 'w0rp/ale'
+
+" Currently, es6 version of snippets is available in es6 branch only
+Plug 'letientai299/vim-react-snippets', { 'branch': 'es6' }
 
 call plug#end()
 
@@ -25,6 +38,8 @@ call plug#end()
 nmap<leader>gd <Plug>(coc-definition)
 nmap<leader>gr <Plug>(coc-references)
 nnoremap<C-p> :GFiles<CR>
+nnoremap<C-f> :Files<CR>
+map <leader>b :b #<CR>
 
 set number
 set tabstop=4
@@ -63,7 +78,7 @@ let g:NERDCompactSexyComs = 1
 " [count]<leader>cy isto ko cc samo neki yanked ubaci vidi kad probas sta je
 
 " Color scheme OVDE
-colorscheme atom-dark-256 
+colorscheme dracula 
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -74,3 +89,20 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" To map to <leader>D:
+noremap <leader>d :call ReactGotoDef()<CR>
+set mouse=nicr
+" ZZryysKgijHbuw6
+" 
+" Supprot for different goto definitions for different file types.
+autocmd FileType cs nmap <silent> gd :OmniSharpGotoDefinition<CR>
+autocmd FileType cs nnoremap <buffer> <Leader>fu :OmniSharpFindUsages<CR>
+autocmd FileType cs nnoremap <buffer> <Leader>fi :OmniSharpFindImplementations<CR>
+autocmd FileType cs nnoremap <Leader><Space> :OmniSharpGetCodeActions<CR>
+
+autocmd FileType ts nmap <silent> gd :call CocActionAsync('jumpDefinition')<CR>
+autocmd FileType html nmap <silent> gd :call CocActionAsync('jumpDefinition')<CR>
+
+let g:ale_linters = {
+\ 'cs': ['OmniSharp']
+\}
