@@ -1,0 +1,95 @@
+Core IDE Plugins for Neovim
+Package Management
+
+    folke/lazy.nvim
+
+Syntax & Parsing
+
+    nvim-treesitter/nvim-treesitter
+
+LSP (Language Server Protocol)
+
+    williamboman/mason.nvim
+
+    williamboman/mason-lspconfig.nvim
+
+    neovim/nvim-lspconfig
+
+Fuzzy Finding & Search
+
+    nvim-telescope/telescope.nvim
+
+    nvim-lua/plenary.nvim (dependency for telescope)
+
+File Explorer
+
+    nvim-tree/nvim-tree.lua
+
+    nvim-tree/nvim-web-devicons
+
+Autocompletion
+
+    hrsh7th/nvim-cmp
+
+    hrsh7th/cmp-nvim-lsp
+
+    hrsh7th/cmp-buffer
+
+    hrsh7th/cmp-path
+
+    L3MON4D3/LuaSnip
+
+    saadparwaiz1/cmp_luasnip
+
+UI Enhancements
+
+    nvim-lualine/lualine.nvim
+
+    akinsho/bufferline.nvim
+
+    folke/which-key.nvim
+
+    catppuccin/nvim (or any theme of your choice)
+
+Git Integration
+
+    lewis6991/gitsigns.nvim
+
+    tpope/vim-fugitive
+
+    NeogitOrg/neogit
+
+Code Formatting & Linting
+
+    stevearc/conform.nvim
+
+    mfussenegger/nvim-lint
+
+Debugging
+
+    mfussenegger/nvim-dap
+
+    rcarriga/nvim-dap-ui
+
+Quality of Life
+
+    windwp/nvim-autopairs
+
+    numToStr/Comment.nvim
+
+    tpope/vim-surround
+
+    folke/trouble.nvim
+
+    folke/todo-comments.nvim
+
+Terminal Integration
+
+    akinsho/toggleterm.nvim
+
+Project Management
+
+    ahmedkhalf/project.nvim
+
+That's the complete list! Let me know when you're ready to implement them and which specific languages you need support for.
+
