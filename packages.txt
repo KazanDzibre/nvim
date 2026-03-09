@@ -1,11 +1,5 @@
 Core IDE Plugins for Neovim
-Package Management
 
-    folke/lazy.nvim
-
-Syntax & Parsing
-
-    nvim-treesitter/nvim-treesitter
 
 LSP (Language Server Protocol)
 
@@ -14,12 +8,6 @@ LSP (Language Server Protocol)
     williamboman/mason-lspconfig.nvim
 
     neovim/nvim-lspconfig
-
-Fuzzy Finding & Search
-
-    nvim-telescope/telescope.nvim
-
-    nvim-lua/plenary.nvim (dependency for telescope)
 
 File Explorer
 
@@ -43,21 +31,12 @@ Autocompletion
 
 UI Enhancements
 
-    nvim-lualine/lualine.nvim
-
-    akinsho/bufferline.nvim
-
     folke/which-key.nvim
-
-    catppuccin/nvim (or any theme of your choice)
 
 Git Integration
 
-    lewis6991/gitsigns.nvim
-
     tpope/vim-fugitive
-
-    NeogitOrg/neogit
+NeogitOrg/neogit
 
 Code Formatting & Linting
 
@@ -73,15 +52,9 @@ Debugging
 
 Quality of Life
 
-    windwp/nvim-autopairs
-
-    numToStr/Comment.nvim
-
     tpope/vim-surround
 
     folke/trouble.nvim
-
-    folke/todo-comments.nvim
 
 Terminal Integration
 
