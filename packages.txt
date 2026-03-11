@@ -1,20 +1,8 @@
-Core IDE Plugins for Neovim
-
-
-LSP (Language Server Protocol)
-
-    williamboman/mason.nvim
-
-    williamboman/mason-lspconfig.nvim
-
-    neovim/nvim-lspconfig
-
 File Explorer
 
     nvim-tree/nvim-tree.lua
 
     nvim-tree/nvim-web-devicons
-
 Autocompletion
 
     hrsh7th/nvim-cmp
@@ -63,6 +51,7 @@ Terminal Integration
 Project Management
 
     ahmedkhalf/project.nvim
+stevearc/dressing.nvim – better input/select dialogs
+folke/trouble.nvim – diagnostics panel
 
-That's the complete list! Let me know when you're ready to implement them and which specific languages you need support for.
 
