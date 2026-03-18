@@ -61,4 +61,6 @@ keymap("n", "<leader>bl", "<cmd>ls<CR>", { desc = "List buffers" })
 -- <leader>bc - Pick a buffer to close
 -- <leader>ba - Close all other buffers
 
-
+-- No plugin needed! Just add these keymaps to your config
+keymap("n", "<C-;>", "gcc", { desc = "Toggle comment (normal mode)", remap = true })
+keymap("v", "<C-;>", "gc", { desc = "Toggle comment (visual mode)", remap = true })

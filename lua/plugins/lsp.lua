@@ -40,43 +40,15 @@ return {
 
             -- Keymaps
             vim.keymap.set("n", "K", vim.lsp.buf.hover)
-            vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition)
-            vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references)
-            vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+            vim.keymap.set("n", "gd", vim.lsp.buf.definition)
+            vim.keymap.set("n", "gr", vim.lsp.buf.references)
+            vim.keymap.set("n", "<C-.>", vim.lsp.buf.code_action)
 
             -- -----------------------------
             -- Auto-format on save
             -- -----------------------------
             -- Lua formatting
 
-            -- For lua_ls
-            require("lspconfig").lua_ls.setup({
-                settings = {
-                    Lua = {
-                        format = {
-                            enable = true,
-                            defaultConfig = {
-                                indent_style = "space",
-                                indent_size = 4,
-                            },
-                        },
-                    },
-                },
-            })
-
-            -- For OmniSharp (C#)
-            require("lspconfig").omnisharp.setup({
-                settings = {
-                    omnisharp = {
-                        useModernNet = true,
-                        formattingOptions = {
-                            UseTabs = false,
-                            TabSize = 4,
-                            IndentSize = 4,
-                        },
-                    },
-                },
-            })
         end,
     },
 }
