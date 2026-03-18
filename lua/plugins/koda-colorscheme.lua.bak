@@ -1,0 +1,29 @@
+return {
+  "oskarnurm/koda.nvim",
+  lazy = false, -- Load during startup
+  priority = 1000, -- Load before other plugins
+  config = function()
+    -- Configure Koda (optional - remove if you want defaults)
+    require("koda").setup({
+      transparent = false, -- Set to true for transparent background
+      styles = {
+        functions = { bold = true },
+        keywords = {},
+        comments = { italic = true }, -- Nice for comments
+        strings = {},
+        constants = {}, -- includes numbers, booleans
+      },
+      -- Optional: customize colors (uncomment to modify)
+      -- colors = {
+      --     bg        = "#101010",
+      --     fg        = "#b0b0b0",
+      --     comment   = "#50585d",
+      --     func      = "#ffffff",
+      --     keyword   = "#777777",
+      -- },
+    })
+
+    -- Set the colorscheme
+    vim.cmd("colorscheme koda")
+  end,
+}
